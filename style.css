@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrap {
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.connector {
+  position: absolute;
+  left: 0;
+  top: 4%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.center {
+  background-color: #eee;
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px 1px #333;
+}
+
+.branch {
+  position: absolute;
+  width: 260px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.branch .node {
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px #333;
+}
+
+.branch .title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+.sublist {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  gap: 6px;
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0;
+  list-style: none;
+}
+.sublist li {
+  background-color: #ededed;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.92rem;
+}
+.sublist li ul {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sublist li ul li {
+  background-color: #ededed;
+  border-radius: 2px;
+  padding: 6px 8px 6px 20px;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.b-top {
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+}
+
+.b-topright {
+  right: 6%;
+  top: 14%;
+}
+
+.b-bottomright {
+  right: 6%;
+  bottom: 32%;
+}
+
+.b-topleft {
+  left: 6%;
+  top: 22%;
+}
+
+.b-bottomleft {
+  left: 6%;
+  bottom: 42%;
+}
+
+.b-bottom {
+  text-align: center;
+  width: auto;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+}
+
+.photo {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  z-index: 4;
+  border: 3px solid #fff;
+}
+
+.photo.photo1 {
+  left: 26%;
+  top: 8%;
+}
+.photo.photo2 {
+  right: 26%;
+  top: 6%;
+}
+.photo.photo3 {
+  right: 24%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.photo.photo4 {
+  left: 25%;
+  top: 52%;
+  transform: translateY(-50%);
+}
+.photo.photo5 {
+  left: 12%;
+  bottom: -20%;
+}
+.photo.photo6 {
+  right: 8%;
+  bottom: -30%;
+  transform: translateX(-50%);
+}
